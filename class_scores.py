@@ -29,9 +29,19 @@ if __name__ == "__main__":
     class_a = [44, 33, 28, 47, 12, 28, 32, 31, 11, 39, 40, 26, 36]
     class_b = [19, 26, 38, 31, 30, 42, 44, 14, 27, 43, 46, 49, 24, 26, 36]
 
+    # Ask user if they want to add a score to both classes
+    user_a = float(input("Score that you want to add to class a: "))
+    user_b = float(input("Score that you want to add to class b: "))
+
+    # Append users scores to class_a and class_b
+    class_a.append(user_a)
+    class_b.append(user_b)
+    
+
     # Combined list equals class_a list plus class_b list
     combined_list = class_a + class_b
-    
+
+
     # Print the title - 'Class Scores Part 1'
     print("Class Scores Part 1\n")
 
