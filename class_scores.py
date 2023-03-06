@@ -6,17 +6,18 @@
 # Author: Eva Melling
 # Date: 02.03.2023
 
-def combined_list_average():
+# Function to calculate the average of lists
+def average(list_class):
     # Create variables - count and total_score
     count = 0
     total_score = 0
 
-    # Loop through combined_list with a for loop
-    for score in combined_list:
+    # Loop through list with a for loop
+    for score in list_class:
         count += 1  # add 1 for everytime it loops through
         total_score += score    # add score onto total_score
 
-    # Store total_score divided by score in variable called mean
+    # Store total_score divided by count in variable called mean
     mean = total_score / count
 
     return mean
@@ -34,9 +35,18 @@ if __name__ == "__main__":
     # Print the title - 'Class Scores Part 1'
     print("Class Scores Part 1\n")
 
-    # Print mean, lowest and highest score
-    print("The mean score is: {}".format(combined_list_average()))
-    print("The lowest score is: {}".format(min(combined_list)))
-    print("The highest score is: {}".format(max(combined_list)))
+    # Print mean, lowest and highest score for combined list
+    print("Mean score for both classes is: {}".format(average(combined_list)))
+    print("Lowest score for both classes is: {}".format(min(combined_list)))
+    print("Highest score for both classes is: {}".format(max(combined_list)))
 
+    # Print mean, lowest and highest score for class_a list
+    print("\nMean score for class a is: {}".format(average(class_a)))
+    print("Lowest score for class a is: {}".format(min(class_a)))
+    print("Highest score for class a is: {}".format(max(class_a)))
+
+    # Print mean, lowest and highest score for class_b list
+    print("\nMean score for class b is: {}".format(average(class_b)))
+    print("Lowest score for class b is: {}".format(min(class_b)))
+    print("Highest score for class b is: {}".format(max(class_b)))
 
