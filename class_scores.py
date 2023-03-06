@@ -36,7 +36,20 @@ if __name__ == "__main__":
     # Append users scores to class_a and class_b
     class_a.append(user_a)
     class_b.append(user_b)
-    
+
+    # Ask user if they want to modify list
+    modify_class_a = input("Modify class a list? (y/n): ")
+    if modify_class_a == "y":   # if y, ask user for index and replacing score
+        where = int(input("Index of score you want to modify: "))
+        what = int(input("What do you want to replace it with?: "))
+        class_a[where] = what   # replace users index and replacing score
+        
+    modify_class_b = input("Modify class b list? (y/n): ")
+    if modify_class_b == "y":   # if y, ask user for index and replacing score
+        where = int(input("Index of score you want to modify: "))
+        what = int(input("What do you want to replace it with?: "))
+        class_b[where] = what   # replace users index and replacing score
+
 
     # Combined list equals class_a list plus class_b list
     combined_list = class_a + class_b
